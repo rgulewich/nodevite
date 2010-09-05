@@ -31,6 +31,8 @@
  * Calling Tests.run() with a String argument will only run the subset of your tests which match the argument.
  */
 
+var print = require('sys').print;
+
 /*
  * Assertions.
  */
@@ -283,3 +285,16 @@ Stubs = {
     }
   }
 };
+
+/*
+ * Exports
+ */
+exports.assert = assert;
+exports.stub = stub;
+exports.Tests = Tests;
+exports.ensureCalled = ensureCalled;
+exports.returns = returns;
+exports.context = context;
+exports.setup = setup;
+exports.tearDown = tearDown;
+exports.should = should;
