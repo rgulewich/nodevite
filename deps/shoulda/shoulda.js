@@ -31,7 +31,7 @@
  * Calling Tests.run() with a String argument will only run the subset of your tests which match the argument.
  */
 
-var print = require('sys').print;
+var puts = require('sys').puts;
 
 /*
  * Assertions.
@@ -48,7 +48,17 @@ var assert = {
   },
 
   equal: function(expected, actual) {
-    if (expected != actual)
+    var fail = 0;
+    if (typeof(expected) == "object" && typeof(actual) == "object") {
+      if (JSON.stringify(expected) != JSON.stringify(actual))
+        fail = 1;
+
+    } else {
+      if (expected != actual)
+        fail = 1;
+    }
+
+    if (fail)
       this.fail("Expected " + this._printObject(expected) + " but received " + this._printObject(actual));
   },
 
@@ -65,11 +75,11 @@ var assert = {
 
   fail: function(message) { throw new AssertionError(message); },
 
-  /* Used for printing out the arugments that passed to assertions. */
+  /* Used for printing out the arguments that are passed to assertions. */
   _printObject: function(object) {
     if (object == null) return "null";
     else if (typeof object == "string") return '"' + object + '"';
-    else return object.toString();
+    else return JSON.stringify(object);
   }
 };
 
@@ -153,8 +163,8 @@ var Tests = {
   completedContexts: [],
   testsRun: 0,
   testsFailed: 0,
-  // Set this to be "console.log" when running in a browser. "print" is a function avaiable in Rhino and V8.
-  outputMethod: print,
+  // Set this to be "console.log" when running in a browser. "puts" is a function avaiable in Rhino and V8.
+  outputMethod: puts,
 
   // The list of callbacks that the developer wants to ensure are called by the end of the test.
   // This is manipulated by the ensureCalled() function.
