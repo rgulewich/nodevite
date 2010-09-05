@@ -47,7 +47,7 @@ var assert = {
       this.fail("Expected false, but was " + value);
   },
 
-  equal: function(expected, actual) {
+  equal: function(expected, actual, msg) {
     var fail = 0;
     if (typeof(expected) == "object" && typeof(actual) == "object") {
       if (JSON.stringify(expected) != JSON.stringify(actual))
@@ -59,7 +59,9 @@ var assert = {
     }
 
     if (fail)
-      this.fail("Expected " + this._printObject(expected) + " but received " + this._printObject(actual));
+      this.fail("Expected " + this._printObject(expected) 
+                + " but received " + this._printObject(actual)
+                + (msg ? ' (Test: ' + msg + ')' : ''));
   },
 
   arrayEqual: function(expected, actual) {
