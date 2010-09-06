@@ -1,0 +1,25 @@
+#header
+  #title
+    span #{owner} is inviting you to
+    h1 #{name}
+  #siteName
+    h1 #{siteName}
+    span #{siteSlogan}
+
+#mainContent
+  #main
+    #leftSide
+      p #{message}
+      p #{message}
+      p #{message}
+    #sideBar
+      #currentPerson
+        #{user.name} (#{user.email})
+      - each u in people
+        #person
+          #{u.name}
+#footer
+  #footerText
+    span Built with 
+    a(href:'http://nodejs.org/') node.js
+  
