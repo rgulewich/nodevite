@@ -1,4 +1,4 @@
-#header
+.container
   #title
     span #{owner} is inviting you to
     h1 #{name}
@@ -6,20 +6,34 @@
     h1 #{siteName}
     span #{siteSlogan}
 
-#mainContent
-  #main
-    #leftSide
-      p #{message}
-      p #{message}
-      p #{message}
-    #sideBar
-      #currentPerson
-        #{user.name} (#{user.email})
-      - each u in people
-        #person
-          #{u.name}
-#footer
-  #footerText
+.container
+  #leftSide
+    p #{message}
+    p #{message}
+    p #{message}
+  #sideBar
+    #currentPerson
+      span
+        .name #{user.name} (#{user.email})
+      a(href='#', id='action-yes') Yes
+      |  -
+      a(href='#', id='action-no') No
+      |  - 
+      a(href='#', id='action-maybe') Maybe
+    h2 Attending
+    - each u in people
+      .person
+        #{u.name}
+    h2 Not Attending
+    - each u in people
+      .person
+        #{u.name}
+    h2 Maybe Attending
+    - each u in people
+      .person
+        #{u.name}
+.container
+  #footer
     span Built with 
     a(href:'http://nodejs.org/') node.js
-  
+    
