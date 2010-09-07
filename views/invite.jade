@@ -6,7 +6,7 @@
     h1 #{siteName}
     span #{siteSlogan}
 
-.container
+div.container.topMargin
   #leftSide
     p #{message}
     p #{message}
@@ -32,8 +32,7 @@
     - each u in people
       .person
         #{u.name}
-.container
-  #footer
-    span Built with 
-    a(href:'http://nodejs.org/') node.js
+div.container#footer.topMargin
+  span Built with 
+  a(href:'http://nodejs.org/') node.js
     

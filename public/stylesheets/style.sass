@@ -1,33 +1,39 @@
+// General colors
+bodyBackgroundColor: #002f2f
+bodyTextColor: #efecca
 // Site logo
-siteNameColor: #005fa1
-siteSloganColor: #575757
-siteNameBackgroundColor: white
+siteNameColor: #046380
+siteSloganColor: #002f2f
+siteNameBackgroundColor: #efecca
 // Title
-titleInviteColor: #005fa1
-titleColor: #575757
+titleInviteColor: #e6e2af
+titleColor: white
 // Sidebar
-sidebarTitleColor: #005fa1
-sidebarBackgroundColor: #ddd
+sidebarTitleColor: #046380
+sidebarBackgroundColor: #a7a37e
 sidebarTextColor: black
 // Current person box
-linkActionColor: #63bdf9
-currentPersonBackgroundColor: #575757
-currentPersonColor: white
+linkActionColor: #046380
+currentPersonBackgroundColor: #e6e2af
+currentPersonTextColor: #002f2f
+// Footer
+footerBackgroundColor: #efecca
+footerTextColor: #002f2f
 
 html
   :margin 0
 
 body
   :margin 0 auto
-  //:padding 50px 80px
   :font 14px/1.5 "Helvetica Nueue", "Lucida Grande", Arial, sans-serif
-  // :font 14px/1.5 'Palatino Linotype', 'Book Antiqua', Palatino, FreeSerif, serif
   :font-size 100%
-  :background-color white
+  :background-color !bodyBackgroundColor
+  :color !bodyTextColor
   //overflow-x: hidden;
 
 a
   :text-decoration none
+  :color !linkActionColor
 
 .container
   :margin 0 auto
@@ -37,17 +43,28 @@ a
 
 //// Header ////
 
+.topMargin
+  :margin-top 20px
+
 #siteName
   :float right
   :width 321px
   :margin 0
-  :padding 0px
+  :padding 0 0 10px 0
   :text-align center
   :font 18px 'Palatino Linotype', 'Book Antiqua', Palatino, FreeSerif, serif
   :color !siteNameColor
   :background-color !siteNameBackgroundColor
   span
     :color !siteSloganColor
+  h1
+    :margin 15px
+  :-webkit-border-bottom-right-radius 8px
+  :-webkit-border-bottom-left-radius 8px
+  :-moz-border-radius-bottomright 8px
+  :-moz-border-radius-bottomleft 8px
+  :border-bottom-right-radius 8px
+  :border-bottom-left-radius 8px
 
 #title
   //:font-size: 13px;
@@ -63,6 +80,7 @@ a
     :color !titleInviteColor
   h1
     :color !titleColor
+    :margin 20px 0 0 20px
 
 //// Main area ////
 
@@ -92,11 +110,9 @@ a
 #currentPerson
   :margin 0 0 10px 0
   :background-color !currentPersonBackgroundColor
-  :color !currentPersonColor
+  :color !currentPersonTextColor
   :border 1px black
   :padding 15px
-  a
-    :color !linkActionColor
 
 //// Footer ////
 
@@ -104,8 +120,15 @@ a
   :font-size: 12px;
   :text-align left
   :font-weight normal
-  :width 500px
-  :margin 25px 0 0 0
-  :padding 0
+  :padding 15px
+  :width 930px
+  :margin-top: 
   :text-align left
-
+  :color !footerTextColor
+  :background-color !footerBackgroundColor
+  :-webkit-border-top-right-radius 8px
+  :-webkit-border-top-left-radius 8px
+  :-moz-border-radius-topright 8px
+  :-moz-border-radius-topleft 8px
+  :border-top-right-radius 8px
+  :border-top-left-radius 8px
