@@ -1,0 +1,105 @@
+html {
+  margin: 0;}
+
+body {
+  margin: 0 auto;
+  font: 14px/1.5 "Helvetica Nueue", "Lucida Grande", Arial, sans-serif;
+  font-size: 100%;
+  background-color: #002f2f;
+  color: #efecca;}
+
+a {
+  text-decoration: none;
+  color: #046380;}
+
+.container {
+  margin: 0 auto;
+  width: 960px;
+  padding: 0;
+  overflow: hidden;}
+
+.topMargin {
+  margin-top: 20px;}
+
+#siteName {
+  float: right;
+  width: 321px;
+  margin: 0;
+  padding: 0 0 10px 0;
+  text-align: center;
+  font: 18px 'Palatino Linotype', 'Book Antiqua', Palatino, FreeSerif, serif;
+  color: #046380;
+  background-color: #efecca;
+  -webkit-border-bottom-right-radius: 8px;
+  -webkit-border-bottom-left-radius: 8px;
+  -moz-border-radius-bottomright: 8px;
+  -moz-border-radius-bottomleft: 8px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;}
+#siteName span {
+  color: #002f2f;}
+#siteName h1 {
+  margin: 15px;}
+
+#title {
+  float: left;
+  text-align: left;
+  font-weight: normal;
+  width: 500px;
+  margin: 15px 0 0 0;
+  padding: 0;
+  text-align: left;}
+#title span {
+  color: #e6e2af;}
+#title h1 {
+  color: white;
+  margin: 20px 0 0 20px;}
+
+#leftSide {
+  clear: both;
+  float: left;
+  width: 600px;
+  margin: 0;
+  padding: 0;
+  text-align: left;}
+
+#sideBar {
+  float: right;
+  width: 291px;
+  margin: 0;
+  padding: 15px;
+  text-align: left;
+  background-color: #a7a37e;
+  color: black;
+  border-radius: 7px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;}
+#sideBar h2 {
+  color: #046380;}
+
+.person {
+  margin: 10px 0 0 0;}
+
+#currentPerson {
+  margin: 0 0 10px 0;
+  background-color: #e6e2af;
+  color: #002f2f;
+  border: 1px black;
+  padding: 15px;}
+
+#footer {
+  font-size: : 12px;;
+  text-align: left;
+  font-weight: normal;
+  padding: 15px;
+  width: 930px;
+  margin-top: : ;
+  text-align: left;
+  color: #002f2f;
+  background-color: #efecca;
+  -webkit-border-top-right-radius: 8px;
+  -webkit-border-top-left-radius: 8px;
+  -moz-border-radius-topright: 8px;
+  -moz-border-radius-topleft: 8px;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;}
