@@ -29,7 +29,6 @@ body
   :font-size 100%
   :background-color !bodyBackgroundColor
   :color !bodyTextColor
-  //overflow-x: hidden;
 
 a
   :text-decoration none
@@ -40,6 +39,10 @@ a
   :width 960px
   :padding 0
   :overflow hidden
+
+.disabled
+  :text-decoration none
+  :color !currentPersonTextColor
 
 //// Header ////
 
@@ -67,8 +70,6 @@ a
   :border-bottom-left-radius 8px
 
 #title
-  //:font-size: 13px;
-  //:line-height: 17px;
   :float left
   :text-align left
   :font-weight normal
@@ -101,6 +102,8 @@ a
   :background-color !sidebarBackgroundColor
   :color !sidebarTextColor
   :border-radius 7px
+  :-webkit-border-radius 8px
+  :-moz-border-radius 8px
   h2
     :color !sidebarTitleColor
 

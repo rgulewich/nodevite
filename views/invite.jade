@@ -8,28 +8,39 @@
 
 div.container.topMargin
   #leftSide
-    p #{message}
-    p #{message}
-    p #{message}
+    #message #{message}
   #sideBar
     #currentPerson
       span
         .name #{user.name} (#{user.email})
-      a(href='#', id='action-yes') Yes
+      - if (user.reply == 'yes')
+        span.actionTaken Yes
+      - else
+        a(href='#', id='action-yes', class='action') Yes
       |  -
-      a(href='#', id='action-no') No
+      - if (user.reply == 'no')
+        span.actionTaken No
+      - else
+        a(href='#', id='action-no', class='action') No
       |  - 
-      a(href='#', id='action-maybe') Maybe
-    h2 Attending
-    - each u in people
+      - if (user.reply == 'maybe')
+        span.actionTaken Maybe
+      - else
+        a(href='#', id='action-maybe', class='action') Maybe
+    h2 Yes (#{people.counts['yes']})
+    - each u in people['yes']
       .person
         #{u.name}
-    h2 Not Attending
-    - each u in people
+    h2 No (#{people.counts['no']})
+    - each u in people['no']
       .person
         #{u.name}
-    h2 Maybe Attending
-    - each u in people
+    h2 Maybe (#{people.counts['maybe']})
+    - each u in people['maybe']
+      .person
+        #{u.name}
+    h2 No Reply (#{people.counts['noreply']})
+    - each u in people['noreply']
       .person
         #{u.name}
 div.container#footer.topMargin
