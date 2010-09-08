@@ -29,8 +29,8 @@ module.exports = {
     assert.eql({ rc: OK, msg: ok_str + eol},
                  s.parseLine('rcpt to: <' + rcptTo + '>'));
     assert.eql({ rc: OK, msg: '354 End data with <CR><LF>.<CR><LF>' + eol }, s.parseLine('data'));
-    assert.eql({ rc: OK }, s.parseLine('line 1'));
-    assert.eql({ rc: OK }, s.parseLine('line 2'));
+    assert.eql({ rc: OK }, s.parseLine('line 1' + eol));
+    assert.eql({ rc: OK }, s.parseLine('line 2' + eol));
     assert.eql({ rc: OK, msg: ok_str + eol }, s.parseLine('.' + eol));
     assert.eql({ rc: QUIT, msg: "221 Bye" + eol},
                  s.parseLine("quit"));
@@ -38,7 +38,7 @@ module.exports = {
                  s.result());
 
     beforeExit(function() {
-      assert.eql(cbCalled, { 'dataEnd': "line 1\nline 2\n", 'quit': 1 });
+      assert.eql(cbCalled, { 'dataEnd': "line 1" + eol + "line 2" + eol, 'quit': 1 });
     });
   },
   'unsupported commands': function() {
