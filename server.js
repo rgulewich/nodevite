@@ -5,8 +5,9 @@
  */
 
 var net      = require('net'),
+    vrequire = require('./lib/vrequire').vrequire,
     // 3rd-party
-    express  = require('express'),
+    express  = vrequire('express'),
     // project
     handlers = require('./lib/handlers'),
     invite   = require('./lib/invite'),
@@ -16,7 +17,7 @@ var smtpServer = 'localhost',
     domain     = 'foo.com',
     email      = 'invite@example.com',
     smtpPort   = 8124,
-    httpPort   = 8000,
+    httpPort   = 80,
     pub        = __dirname + '/public';
 
 var server = net.createServer(function (stream) {
