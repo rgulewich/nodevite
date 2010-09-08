@@ -1,0 +1,69 @@
+Delivered-To: primary.recipient@gmail.com
+Received: by 10.216.11.207 with SMTP id 57cs148420wex;
+        Fri, 3 Sep 2010 21:01:39 -0700 (PDT)
+Return-Path: <the.sender@gmail.com>
+Received-SPF: pass (google.com: domain of the.sender@gmail.com designates 10.114.126.2 as permitted sender) client-ip=10.114.126.2;
+Authentication-Results: mr.google.com; spf=pass (google.com: domain of the.sender@gmail.com designates 10.114.126.2 as permitted sender) smtp.mail=the.sender@gmail.com; dkim=pass header.i=the.sender@gmail.com
+Received: from mr.google.com ([10.114.126.2])
+        by 10.114.126.2 with SMTP id y2mr254680wac.57.1283572897478 (num_hops = 1);
+        Fri, 03 Sep 2010 21:01:37 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=gamma;
+        h=domainkey-signature:mime-version:received:received:date:message-id
+         :subject:from:to:content-type;
+        bh=oKKZcHBB0dkvupzjayJrSZk9B78xXTwtKCEq+ox5dEI=;
+        b=VnGUGMS5N2UCxEYxLaG5Dpa+hgAWDEzDii2mgGaWLsyx/0jcESDn9sBmCeWkghpjCL
+         gPL1a+KZ+Ja/8k69lUjAJeTkl7GMbGQSz9SCXtaJGSDXUYei8sKUz8/IDkVBHA0ITgQf
+         /zz7iyUX0mZrUx0oa0TOjXuU2WY+geT3qY5lI=
+DomainKey-Signature: a=rsa-sha1; c=nofws;
+        d=gmail.com; s=gamma;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        b=hxSne6XSlJLeDrdxxSCiB7FjguZnTCJv5Y9N5L/YMvGKQ+IflWIy3prLsvUlrfJim0
+         JThrD6wxHJ6mGUKDfy+QY2dgGRaiwyNmAe3hJfGApfEN4MGRC5j3PIhykAli35QDAEwk
+         72g3bCGpwTQ4N4YkDqXQGQGkWq8RAMjjoSF8g=
+MIME-Version: 1.0
+Received: by 10.114.126.2 with SMTP id y2mr204741wac.57.1283572897419; Fri, 03
+ Sep 2010 21:01:37 -0700 (PDT)
+Received: by 10.114.235.15 with HTTP; Fri, 3 Sep 2010 21:01:37 -0700 (PDT)
+Date: Fri, 3 Sep 2010 21:01:37 -0700
+Message-ID: <AANLkTiktuKLUTGp98mUBFP-P94CWQRR6i=tGan3u-8Sz@mail.gmail.com>
+Subject: Breakfast...
+From: The Sender <the.sender@gmail.com>
+To: Recip One <recip.one@gmail.com>, Recip Two <recip.two@gmail.com>, 
+	Recip Three <recipthree@gmail.com>, Recip Four <recip@example.ca>, 
+	Recip Five <recip.five@example.com>, "recip6@gmail.com" <recip6@gmail.com>, 
+	Recip 7 <recip7@gmail.com>, "primary.recipient@gmail.com" <primary.recipient@gmail.com>, 
+	Recip 8 <recip8@gmail.com>, "Recipient, Ninth" <Ninth.Recipient@example.ca>
+Content-Type: multipart/alternative; boundary=00163646bf9898118c048f671a7c
+
+--00163646bf9898118c048f671a7c
+Content-Type: text/plain; charset=ISO-8859-1
+
+Hey all!
+
+Sorry, but this week, I am just a wreck from some very early morning shifts.
+ I'm afraid I won't be organizing a breakfast for tomorrow, but please don't
+let that stop anyone who is hellbent on some good breakfast.  Recip, I would
+highly recommend going to Jethro's if you haven't been already.  It is only
+up the road from you, after all.
+
+Hope you all have a great long weekend.  I'll be more on top of things by
+mid-next week.  Again, I'm sorry!
+
+The Sender
+
+--00163646bf9898118c048f671a7c
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Hey all!<div><br></div><div>Sorry, but this week, I am just a wreck from so=
+me very early morning shifts. =A0I&#39;m afraid I won&#39;t be organizing a=
+ breakfast for tomorrow, but please don&#39;t let that stop anyone who is h=
+ellbent on some good breakfast. =A0Recip, I would highly recommend going to =
+Jethro&#39;s if you haven&#39;t been already. =A0It is only up the road fro=
+m you, after all. =A0</div>
+<div><br></div><div>Hope you all have a great long weekend. =A0I&#39;ll be =
+more on top of things by mid-next week. =A0Again, I&#39;m sorry!</div><div>=
+<br></div><div>The Sender</div>
+
+--00163646bf9898118c048f671a7c--
