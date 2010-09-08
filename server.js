@@ -12,8 +12,7 @@ var net      = require('net'),
     invite   = require('./lib/invite'),
     smtp     = require('./lib/smtp');
 
-var smtpServer = 'localhost',
-    domain     = 'foo.com',
+var domain     = 'foo.com',
     email      = 'invite@example.com',
     smtpPort   = 8124,
     httpPort   = 8000,
@@ -41,9 +40,9 @@ var server = net.createServer(function (stream) {
   s.on('dataEnd', function(bodyText) {
     invite.createInviteFromEmail(bodyText); 
   });
-}).listen(smtpPort, smtpServer);
+}).listen(smtpPort);
 
-console.log('SMTP server listening at ' + smtpServer + ':' + smtpPort);
+console.log('SMTP server listening on port ' + smtpPort);
 console.log('SMTP server e-mail address: ' + email);
 console.log('public dir: ' + pub);
 var app = express.createServer(
