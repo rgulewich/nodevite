@@ -5,7 +5,8 @@ use warnings;
 
 use Net::SMTP;
 #my $host = 'mx1.sophos.com';
-my $host = 'localhost:8124';
+#my $host = 'localhost:8124';
+my $host = '8.19.41.48:8124';
 my $from = 'tragicflaw@gmail.com';
 my $to   = 'invite@example.com';
 
