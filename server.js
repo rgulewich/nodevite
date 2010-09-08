@@ -17,7 +17,7 @@ var smtpServer = 'localhost',
     domain     = 'foo.com',
     email      = 'invite@example.com',
     smtpPort   = 8124,
-    httpPort   = 80,
+    httpPort   = 8000,
     pub        = __dirname + '/public';
 
 var server = net.createServer(function (stream) {
@@ -57,6 +57,6 @@ app.get('/i/:id?/:uid?', handlers.invitePage);
 app.post('/i/:id?/:uid?/reply/:reply?', handlers.inviteAction);
 app.get('/', handlers.mainPage);
 
-app.listen();
+app.listen(httpPort);
 console.log('Express server started on port %s', app.address().port);
 
