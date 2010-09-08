@@ -1,0 +1,1 @@
+{"name":"couchdb","version":"1.0.0","author":{"name":"Felix Geisend\u00f6rfer","email":"felix@debuggable.com"},"description":"A CouchDB module following node.js idioms","keywords":["couch","couchdb"],"engines":["node"],"directories":{"lib":"lib"},"main":"lib/couchdb","_id":"couchdb-1.0.0","_nodeSupported":true}

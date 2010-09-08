@@ -1,0 +1,1 @@
+{"name":"jade","description":"Jade template engine","version":"0.4.0","author":{"name":"TJ Holowaychuk","email":"tj@vision-media.ca"},"main":"./lib/jade","bin":{"jade":"./bin/jade"},"engines":{"node":">= 0.1.98"},"_id":"jade-0.4.0","_nodeSupported":true}
