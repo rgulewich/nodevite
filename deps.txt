@@ -3,3 +3,4 @@ express
 jade
 couchdb
 expresso
+hash

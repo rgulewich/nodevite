@@ -5,9 +5,8 @@
  */
 
 var net      = require('net'),
-    vrequire = require('./lib/vrequire').vrequire,
     // 3rd-party
-    express  = vrequire('express'),
+    express  = require('express'),
     // project
     handlers = require('./lib/handlers'),
     invite   = require('./lib/invite'),
