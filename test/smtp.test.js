@@ -51,5 +51,5 @@ module.exports = {
     var s = new Parser('hostname', 'invite@somewhere.com');
     assert.eql({ rc: OK, msg: '550 5.7.1 recipient <' + rcptTo + '> unknown' + eol},
                  s.parseLine('rcpt to: <' + rcptTo + '>'));
-  }
+  },
 };

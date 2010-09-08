@@ -5,8 +5,11 @@
  */
 
 var net      = require('net'),
+    // 3rd-party
     express  = require('express'),
+    // project
     handlers = require('./lib/handlers'),
+    invite   = require('./lib/invite'),
     smtp     = require('./lib/smtp');
 
 var smtpServer = 'localhost',
@@ -35,8 +38,8 @@ var server = net.createServer(function (stream) {
     stream.end();
   });
 
-  s.on('helo', function(match) {
-    console.log('XXXXXX');
+  s.on('dataEnd', function(bodyText) {
+    invite.createInviteFromEmail(bodyText); 
   });
 }).listen(smtpPort, smtpServer);
 
@@ -51,7 +54,7 @@ app.use(express.logger());
  
 app.get('/i/:id?/:uid?', handlers.invitePage);
 app.post('/i/:id?/:uid?/reply/:reply?', handlers.inviteAction);
-//app.get('/', handlers.mainPage);
+app.get('/', handlers.mainPage);
 
 app.listen();
 console.log('Express server started on port %s', app.address().port);
