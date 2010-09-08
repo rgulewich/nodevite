@@ -1,1 +1,0 @@
-{"name":"expresso","version":"0.6.1","description":"TDD framework, light-weight, fast, CI-friendly","author":{"name":"TJ Holowaychuk","email":"tj@vision-media.ca"},"bin":{"expresso":"./bin/expresso"},"scripts":{"install":"make install-jscov"},"_id":"expresso-0.6.1","engines":{"node":"*"},"_nodeSupported":true}
