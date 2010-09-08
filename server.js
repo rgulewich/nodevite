@@ -1,9 +1,13 @@
+/*
+ * Brings up 2 services:
+ * - an SMTP server listening for invitations
+ * - an HTTP server that allows people to reply to invitations
+ */
 
 var net      = require('net'),
     express  = require('express'),
     handlers = require('./lib/handlers'),
     smtp     = require('./lib/smtp');
-var SMTP = smtp.SMTP;
 
 var smtpServer = 'localhost',
     domain     = 'foo.com',
@@ -13,9 +17,9 @@ var smtpServer = 'localhost',
     pub        = __dirname + '/public';
 
 var server = net.createServer(function (stream) {
-  var s;
   stream.setEncoding('utf8');
-  s = new SMTP(domain, email);
+  var s = new smtp.Parser(domain, email);
+
   stream.on('connect', function () {
     stream.write(s.connect());
   });
@@ -29,6 +33,10 @@ var server = net.createServer(function (stream) {
   });
   stream.on('end', function () {
     stream.end();
+  });
+
+  s.on('helo', function(match) {
+    console.log('XXXXXX');
   });
 }).listen(smtpPort, smtpServer);
 
